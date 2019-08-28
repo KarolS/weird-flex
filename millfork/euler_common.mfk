@@ -1,0 +1,36 @@
+#if MILLFORK_VERSION <= 0306
+// to allow compiling against 0.3.8 stdlib with 0.3.6 compiler
+const byte nullchar = 0
+#endif
+
+// various utility stuff that is absent in the Millfork standard library:
+
+void putlong(long w) {
+    byte digits
+    byte lastdigit
+    digits = 0
+    long mask
+    for mask:[1000000000, 
+              100000000,
+              10000000,
+              1000000,
+              100000,
+              10000,
+              1000,
+              100,
+              10,
+              1] {
+        lastdigit = 0
+        while w >= mask {
+            w -= mask
+            lastdigit += 1
+        }
+        if digits != 0 || lastdigit != 0 {
+            putchar('0' + lastdigit)
+            digits += 1
+        }
+    }
+    if digits == 0 {
+        putchar('0')
+    }
+}

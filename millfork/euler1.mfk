@@ -1,0 +1,24 @@
+import stdio
+import euler_common
+
+long euler1(word n) {
+    word i
+    long sum
+    sum = 0
+    for i,0,paralleluntil,n {
+        if i %% 3 == 0 || i %% 5 == 0 {
+            sum += i
+        }
+    }
+    return sum
+}
+
+void main() {
+    putstrz("Euler 1 example: "z)
+    putlong(euler1(10))
+    new_line()
+    putstrz("Euler 1 solution: "z)
+    putlong(euler1(1000))
+    new_line()
+    while true {}
+}
