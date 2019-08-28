@@ -14,6 +14,7 @@ long euler1(word n) {
 }
 
 void main() {
+    ensure_mixedcase()
     putstrz("Euler 1 example: "z)
     putlong(euler1(10))
     new_line()
