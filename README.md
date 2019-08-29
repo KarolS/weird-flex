@@ -1,8 +1,11 @@
-# project-euler
-Solutions for Project Euler in multiple languages
+Solutions for various code challenges problems in multiple languages
 
-Problem # | J | Racket | Millfork
-----|----|----|----
-1 | ✔️ | ✔️ | ✔️
+Challenges included so far: 
+
+* Project Euler (PE)
+
+Problem # | J | Racket | Millfork | COBOL
+-----|-----|-----|-----|-----
+PE 1 | ✔️ | ✔️ | ✔️ | ✔️
 
 
