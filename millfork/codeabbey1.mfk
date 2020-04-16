@@ -1,0 +1,22 @@
+import stdio
+import string
+import c64_basic
+
+void main() {
+    pointer line
+    byte i
+    word n1, n2
+    line = readline()
+    for i,0,until,255 {
+        if line[i] == ' ' { 
+            line[i] = nullchar
+            break
+        }
+    }
+    n1 = strz2word(line)
+    line += strzlen(line)
+    line += 1
+    n2 = strz2word(line)
+    putword(n1 + n2)
+    new_line()
+}

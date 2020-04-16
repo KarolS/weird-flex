@@ -1,0 +1,33 @@
+import stdio
+import string
+import c64_basic
+
+void main() {
+    pointer line, line_end
+    byte i
+    word n, num_count
+    word sum
+    sum = 0
+    
+    num_count = readword()
+    line = readline()
+    line_end = line + strzlen(line)
+    
+    for n,0,paralleluntil,num_count {
+        for i,0,until,255 {
+            if line[i] == nullchar || line[i] == ' ' { 
+                line[i] = nullchar
+                break
+            }
+        }
+        sum += strz2word(line)
+        line += strzlen(line)
+        if line == line_end {
+            line = readline()
+        } else {
+            line += 1
+        }
+    }
+    putword(sum)
+    new_line()
+}

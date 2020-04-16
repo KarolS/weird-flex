@@ -1,0 +1,23 @@
+import stdio
+import string
+import c64_basic
+
+const array vowels = "aeiouy"
+
+void main() {
+    pointer line
+    byte i, j, sum
+    sum = 0
+    ensure_mixedcase()
+    line = readline()
+    for i,0,paralleluntil,strzlen(line) {
+        for j,0,paralleluntil,vowels.length {
+            if line[i] == vowels[j] {
+                sum += 1
+                continue i
+            }
+        }
+    }
+    putword(sum)
+    new_line()
+}
